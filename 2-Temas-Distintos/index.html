@@ -6,13 +6,107 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>2 - Temas distintos</title>
     <link rel="stylesheet" href="../normalize.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" />
     <link rel="stylesheet" href="index.css">
 </head>
 
+
+<style>
+    /**
+    ESTILOS BOTON SWITCH PARA CAMBIAR DE TEMA (NO LO PEDIA EL EJERCICIO)
+    */
+
+    nav {
+        max-width: 100%;
+        margin: 0;
+        display: flex;
+        justify-content: flex-end;
+        padding: 0.9em;
+    }
+
+    nav i {
+        padding: 0 0.5em;
+    }
+
+    nav i.fa-sun {
+        color: #e4e40c;
+    }
+
+    nav i.fa-moon {
+        color: gray;
+    }
+
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 60px;
+        height: 34px;
+    }
+
+    .switch input {
+        display: none;
+    }
+
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        -webkit-transition: 0.4s;
+        transition: 0.4s;
+    }
+
+    .slider:before {
+        position: absolute;
+        content: "";
+        height: 26px;
+        width: 26px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        -webkit-transition: 0.4s;
+        transition: 0.4s;
+    }
+
+    input:checked+.slider {
+        background-color: #2196f3;
+    }
+
+    input:focus+.slider {
+        box-shadow: 0 0 1px #2196f3;
+    }
+
+    input:checked+.slider:before {
+        -webkit-transform: translateX(26px);
+        -ms-transform: translateX(26px);
+        transform: translateX(26px);
+    }
+
+    /* Rounded sliders */
+    .slider.round {
+        border-radius: 34px;
+    }
+
+    .slider.round:before {
+        border-radius: 50%;
+    }
+</style>
+
 <body>
     <main id="root">
+        <nav>
+            <i class="fas fa-2x fa-sun"></i>
+            <label class="switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+            </label>
+            <i class="fas fa-2x fa-moon"></i>
+        </nav>
 
-        <div class="theme-dark">
+        <div id="theme" class="theme-light">
             <div class="app">
                 <h1 class="title">Soy un titulo h1</h1>
                 <h2 class="title">Soy un titulo h2</h2>
@@ -33,6 +127,35 @@
             </div>
         </div>
     </main>
+
+
+    <script>
+        const checkbox = document.querySelector("input[type=checkbox");
+        checkbox.addEventListener("change", toggleSwitch, false);
+
+        function toggleSwitch(e) {
+            const checkbox = e.target;
+            const label = checkbox.parentElement;
+            changeBackgroundTheme(label, checkbox.checked);
+        }
+
+        function changeBackgroundTheme(label, checked) {
+            const sunIcon = label.previousElementSibling;
+            const moonIcon = label.nextElementSibling;
+            const themeRoot = document.getElementById('theme')
+
+            if (checked) {
+                sunIcon.style.color = "gray";
+                moonIcon.style.color = "#fac9b8";
+                themeRoot.className = "theme-dark"
+            } else {
+                sunIcon.style.color = "#e4e40c";
+                moonIcon.style.color = "gray";
+                themeRoot.className = "theme-light"
+            }
+        }
+    </script>
+
 </body>
 
 </html>
