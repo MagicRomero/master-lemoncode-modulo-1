@@ -1,0 +1,13 @@
+@import "mixin-palete-creator";
+
+.pink-palette {
+  @include draw-palette(pink);
+}
+
+.red-palette {
+  @include draw-palette(red);
+}
+
+.green-palette {
+  @include draw-palette(green);
+}

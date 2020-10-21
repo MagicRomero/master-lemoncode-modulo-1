@@ -1,0 +1,31 @@
+{
+  "name": "modulo-1-layout-ejercicios",
+  "version": "0.1.0",
+  "description": "Ejercicios del Modulo 1 para el Master de Lemoncode",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MagicRomero/master-lemoncode-modulo-1.git"
+  },
+  "keywords": [
+    "lemoncode",
+    "master",
+    "html",
+    "css",
+    "htmlandcss",
+    "frontend",
+    "sass",
+    "palette",
+    "navbar",
+    "grid"
+  ],
+  "author": "Daniel Romero Tapia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MagicRomero/master-lemoncode-modulo-1/issues"
+  },
+  "homepage": "https://github.com/MagicRomero/master-lemoncode-modulo-1#readme"
+}
