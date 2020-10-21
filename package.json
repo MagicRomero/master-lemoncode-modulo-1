@@ -4,6 +4,7 @@
   "description": "Ejercicios del Modulo 1 para el Master de Lemoncode",
   "main": "index.js",
   "scripts": {
+    "compile-first-exercise": "node-sass --include-path sass ./1-Paleta-De-Colores/index.scss ./1-Paleta-De-Colores/index.css ",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -27,5 +28,8 @@
   "bugs": {
     "url": "https://github.com/MagicRomero/master-lemoncode-modulo-1/issues"
   },
-  "homepage": "https://github.com/MagicRomero/master-lemoncode-modulo-1#readme"
+  "homepage": "https://github.com/MagicRomero/master-lemoncode-modulo-1#readme",
+  "devDependencies": {
+    "node-sass": "^4.14.1"
+  }
 }
