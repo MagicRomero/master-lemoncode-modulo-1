@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "compile-first-exercise": "node-sass --include-path sass ./1-Paleta-De-Colores/index.scss ./1-Paleta-De-Colores/index.css ",
+    "compile-second-exercise": "node-sass --include-path sass ./2-Temas-Distintos/index.scss ./2-Temas-Distintos/index.css ",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

@@ -1,0 +1,74 @@
+html,
+body {
+  height: 100%; }
+
+#root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column; }
+  #root > div {
+    display: flex;
+    flex: 1; }
+
+.app {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-items: center;
+  justify-content: center; }
+  .theme-light .app {
+    color: #408bbd;
+    background-color: #fff;
+    font-family: Lucida Sans; }
+  .theme-dark .app {
+    color: #ddd;
+    background-color: #222;
+    font-family: Segoe UI; }
+  .app .button {
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 15px 32px;
+    display: inline-block;
+    transition: color 0.1s, border-color 0.1s, background-color 0.1s; }
+    .theme-light .app .button {
+      color: #408bbd;
+      border-color: #408bbd;
+      background-color: #fff;
+      text-transform: none; }
+      .theme-light .app .button:hover {
+        color: #61b0e7;
+        border-color: #61b0e7; }
+    .theme-dark .app .button {
+      color: #aaa;
+      border-color: #aaa;
+      background-color: #333;
+      text-transform: uppercase; }
+      .theme-dark .app .button:hover {
+        color: #ddd;
+        border-color: #ddd; }
+  .app .card-container {
+    transition: 0.3s;
+    margin: 0.5rem 0.2rem; }
+    .theme-light .app .card-container {
+      font-family: Georgia;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.911);
+      border: 2px solid #fff;
+      border-radius: 0; }
+      .theme-light .app .card-container:hover {
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.911); }
+    .theme-dark .app .card-container {
+      font-family: Verdana;
+      box-shadow: 0 4px 8px 0 rgba(233, 232, 232, 0.911);
+      border: 1px solid #aaa;
+      border-radius: 10px; }
+      .theme-dark .app .card-container:hover {
+        box-shadow: 0 8px 16px 0 rgba(233, 232, 232, 0.911); }
+    .app .card-container img {
+      display: block;
+      max-width: 300px;
+      width: 100%;
+      height: auto; }
+    .app .card-container .card {
+      padding: 2px 16px; }
