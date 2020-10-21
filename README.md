@@ -32,8 +32,8 @@ A continuación se enumeran los ejercicios propuestos a modo de índice para la 
 
 1.  [Paleta de colores](#paleta-de-colores)
 2.  [Aplicar temas en web](#aplicar-temas-en-web)
-3.  [Barra de navegación responsive](#navbar-responsive)
-4.  [Card layout con CSS grid](#card-css-grid)
+3.  [Barra de navegación responsive](#barra-de-navegacion-responsive)
+4.  [Card layout con CSS grid](#card-layout-con-css-grid)
 
 ---
 
