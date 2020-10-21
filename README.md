@@ -2,14 +2,14 @@
 
 ### Antes de empezar
 
-Se ha importado normalize.css para renderizar los elementos html de una manera mas estándar y consistente entre navegadores.
-Los archivos .scss ya han sido transpilados a css en cada ejercicio, si necesitas volver a recompilarlos, debes tener instalado node + npm en tu máquina y ejecutar el siguiente comando en la raíz del proyecto:
+Se ha importado `normalize.css` para renderizar los elementos html de una manera mas estándar y consistente entre navegadores.
+Los archivos `.scss` ya han sido transpilados a `css` en cada ejercicio, si necesitas volver a recompilarlos, debes tener instalado `node + npm` en tu máquina y **ejecutar el siguiente comando** en la raíz del proyecto:
 
 ```sh
 npm install
 ```
 
-Esto instalara la dependencia de desarrollo node-sass, el proyecto ya contiene los scripts para los ejercicios 1 y 2 que es donde únicamente se utiliza sass:
+Esto instalara la dependencia de desarrollo `node-sass`, el proyecto ya contiene los scripts para los ejercicios 1 y 2 que es donde únicamente se utiliza sass:
 
 ```json
 {
@@ -28,7 +28,7 @@ npm run compile-second-exercise
 
 # Tabla de contenidos
 
-A continuación se enumeran los ejercicios propuestos a modo de índice para la práctica de HTML, CSS y SASS (.scss)
+A continuación se enumeran los ejercicios propuestos a modo de índice para la práctica de **_HTML, CSS y SASS (.scss)_**
 
 1.  [Paleta de colores](#paleta-de-colores)
 2.  [Aplicar temas en web](#aplicar-temas-en-web)
@@ -39,7 +39,7 @@ A continuación se enumeran los ejercicios propuestos a modo de índice para la 
 
 ## Paleta de colores
 
-El objetivo es usar el preprocesador SASS para crear paletas de colores dinámicas y utilizarlos en nuestro html con una simple clase.
+El objetivo es usar el **preprocesador SASS** para crear paletas de colores dinámicas y utilizarlos en nuestro html con una simple clase.
 
 El html final es sencillo e intuitivo, ya que las propias clases nos indican que color base se esta utilizando en la paleta:
 
@@ -75,7 +75,7 @@ El html final es sencillo e intuitivo, ya que las propias clases nos indican que
 </main>
 ```
 
-En el lado de SASS, se ha creado una variable global donde guardamos las paletas de colores usando el propio color como llave _(lo ideal seria generarlas dinámicas pasandole un color base)_
+**En el lado de SASS**, se ha creado una variable global donde guardamos las paletas de colores usando el propio color como llave **_(lo ideal seria generarlas dinámicas pasandole un color base)_**
 
 ```scss
 $palettes: (
@@ -92,7 +92,7 @@ $palettes: (
  }
 ```
 
-Es a través de la funcion 'palette-color' y el mixin 'create-palete-classes' donde sucede la magia, la primera función se encarga de obtener el color segun el tono usando nuestra variable global '\$palettes':
+Es a través de la funcion `@palette-color` y el mixin `@create-palete-classes` donde sucede la magia, la primera función se encarga de obtener el color segun el tono usando nuestra **_variable global_** `$palettes`:
 
 ```scss
 @function palette-color($color, $tone) {
@@ -115,7 +115,7 @@ Es a través de la funcion 'palette-color' y el mixin 'create-palete-classes' do
 }
 ```
 
-Esta función la utilizamos dentro de nuestro mixin el cual su único objetivo es crear las clases pasandole un color y usandolo como prefijo de la misma:
+Esta función la utilizamos dentro de nuestro mixin el cual su único objetivo es crear las clases pasandole un color y usandolo como prefijo de la clase final:
 
 ```scss
 $tones: "extra-dark" "darker" "dark" "base" "light" "lighter" "extra-light";
@@ -156,7 +156,7 @@ $tones: "extra-dark" "darker" "dark" "base" "light" "lighter" "extra-light";
 
 El objetivo de este ejercicio es cambiar propiedades comunes de los elementos segun el tema de color que tenga seteado en ese momento la aplicación, el ejemplo mas utilizado es el de cambiar el diseño de una web a través de un switch que represente un tema claro u oscuro, cambiando colores de fuente, bordes, color de fondo, etc.
 
-Se ha aplicado una lógica similar al ejercicio anterior, disponemos de una variable global '\$themes', donde guardaremos la configuración de cada uno a través de una key que representara el theme en si.
+Se ha aplicado una lógica similar al ejercicio anterior, disponemos de una variable global `$themes`, donde guardaremos la configuración de cada uno a través de una key que representara el theme en si.
 
 ```scss
 $themes: (
@@ -191,7 +191,7 @@ $themes: (
 );
 ```
 
-Con un simple mixin y una función podemos generar las clases necesarias que nos permitirán cambiar el estilo css de nuestros elementos html de manera muy fácil:
+Con un simple mixin que llamaremos `@themify` y una función `@themed` podemos generar las clases necesarias que nos permitirán cambiar el estilo css de nuestros elementos html de manera muy fácil:
 
 ```scss
 @mixin themify($themes: $themes) {
@@ -219,7 +219,7 @@ Con un simple mixin y una función podemos generar las clases necesarias que nos
 }
 ```
 
-El mixin nos permite generar nuestros temas dinámicamente y crear las clases necesarias segun los que hayamos configurado que en nuestro caso es 'light' y 'dark', si vemos un ejemplo se verá mas fácil:
+El mixin nos permite generar nuestros temas dinámicamente y crear las clases necesarias segun los que hayamos configurado que en nuestro caso de ejemplo es **'light' y 'dark'**, en el siguiente ejemplo se puede entender mejor:
 
 ```scss
 .app {
@@ -236,8 +236,7 @@ El mixin nos permite generar nuestros temas dinámicamente y crear las clases ne
   }
 }
 
-// El CSS que genera sería esto:
-
+// El CSS que genera sería:
 .app {
   display: flex;
   flex-direction: column;
@@ -270,8 +269,8 @@ En el html simplemente debemos embeber nuestra aplicación en un contenedor gene
 
 ## Barra de navegacion responsive
 
-Este ejercicio al ser simple no he necesitado aplicar SASS ya que únicamente necesitaba unas cuantas propiedades CSS sin necesidad de dinamismos.
-He utilizado flexbox junto a media queries para conseguir el resultado final:
+Este ejercicio al ser simple no he necesitado aplicar **SASS** ya que únicamente necesitaba unas cuantas propiedades **CSS** sin necesidad de dinamismos.
+He utilizado `flexbox` junto a `media queries` para conseguir el resultado final:
 
 ```css
 main {
@@ -319,9 +318,9 @@ ul {
 
 ## Card layout con CSS grid
 
-En este ejercicio tampoco he utilizado SASS ya que no lo requería para llegar al resultado final, como antes, solo necesitaba unas cuantas propiedades CSS para conseguir el resultado final.
+En este ejercicio tampoco he utilizado **SASS** ya que no lo requería para llegar al resultado final, como antes, solo necesitaba unas cuantas propiedades **CSS** para conseguir el resultado final.
 
-Las clases importantes donde he utilizado grid han sido el contenedor principal que representa el grid, el contenedor que contiene las cards y la card como tal, utilizando media queries en resoluciones menores para disminuir el número de elementos que hay en una fila:
+Las clases importantes donde he utilizado grid han sido el contenedor principal que representa el grid, el contenedor que contiene las cards y la card como tal, utilizando `media queries` en resoluciones menores para disminuir el número de elementos que hay en una fila:
 
 ```css
 .card-grid {
